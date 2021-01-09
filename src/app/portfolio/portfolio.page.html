@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Vehiculos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- <ion-list-header>
+      <ion-label>Vehiculos</ion-label>
+    </ion-list-header> -->
+    <ion-list>
+      <ion-item-sliding *ngFor="let vehicle of vehicles">
+        <ion-item>
+          <ion-avatar>
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ vehicle.brand }}</h2>
+            <h3>{{ vehicle.model }}</h3>
+            <p>{{ vehicle.year }}</p>
+          </ion-label>
+        </ion-item>
+        <ion-item-options side="start">
+          <ion-item-option color="danger" (click)="delete(vehicle)">Eliminar</ion-item-option>
+          <ion-item-option color="warning" (click)="update(vehicle)">Actualizar</ion-item-option>
+        </ion-item-options>
+    
+        <ion-item-options side="end">
+          <ion-item-option color="primary" (click)="favorite(vehicle)">Favorito</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    
+  </ion-list>
+</ion-content>
