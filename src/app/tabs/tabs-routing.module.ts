@@ -24,6 +24,10 @@ const routes: Routes = [
         loadChildren: () => import('../portfolio/portfolio.module').then(m => m.PortfolioPageModule)
       },
       {
+        path: 'driver-portfolio',
+        loadChildren: () => import('../driver-portfolio/driver-portfolio.module').then(m => m.DriverPortfolioPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
